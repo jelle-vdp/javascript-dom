@@ -11,6 +11,9 @@
 
 (function() {
 
-    // your code here
+    const target = document.getElementById("target");
+    const tableRow = "<tr><td>Hello world</td></tr>";
+    const tableRows = tableRow.repeat(10);
+    target.innerHTML = `<table><tbody>${tableRows}</tbody></table>`;
 
 })();
