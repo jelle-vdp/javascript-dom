@@ -11,6 +11,20 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("pass-one").addEventListener("keydown", () => {
+        let indicator = document.getElementById("validity");
+        let pwField = document.getElementById("pass-one");
+        let pwLength = pwField.value.length + 1;
+        let amountNum = (pwField.value.match(/\d/g) || []).length + 1;
+
+        console.log("lengte pw: ", pwLength);
+        console.log("nummers: ", amountNum);
+
+        if (pwLength > 7 && amountNum > 1){
+            indicator.innerText = "OK"
+        }
+
+        
+    })
 
 })();

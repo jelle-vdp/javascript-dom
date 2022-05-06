@@ -15,7 +15,6 @@
         let indicator = document.getElementById("counter");
         let pwField = document.getElementById("pass-one");
         let pwLength = pwField.value.length;
-        console.log("change");
 
         indicator.innerText = pwLength.toString() + "/10";
     })
