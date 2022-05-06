@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        let pw1Field = document.getElementById("pass-one");
+        let pw2Field = document.getElementById("pass-two");
+
+        if (pw1Field.value !== pw2Field.value){
+            pw1Field.className = "error";
+            pw2Field.className = "error";
+        }
+    })
 
 })();
