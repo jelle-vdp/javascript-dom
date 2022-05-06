@@ -11,6 +11,15 @@
 
 (function() {
 
-    // your code here
+    document.getElementsByTagName("img")[0].addEventListener("mouseenter", () => {
+        const hoverImgSrc = document.getElementsByTagName("img")[0].dataset.hover;
+        document.getElementsByTagName("img")[0].dataset.original = document.getElementsByTagName("img")[0].src;
+        document.getElementsByTagName("img")[0].src = hoverImgSrc;
+    });
+
+    document.getElementsByTagName("img")[0].addEventListener("mouseleave", () => {
+        const ogImgSrc = document.getElementsByTagName("img")[0].dataset.original;
+        document.getElementsByTagName("img")[0].src = ogImgSrc;
+    });
 
 })();
