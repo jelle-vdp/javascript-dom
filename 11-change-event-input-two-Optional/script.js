@@ -11,20 +11,18 @@
 
 (function() {
 
-    document.getElementById("pass-one").addEventListener("keydown", () => {
+    document.getElementById("pass-one").addEventListener("keyup", () => {
         let indicator = document.getElementById("validity");
         let pwField = document.getElementById("pass-one");
-        let pwLength = pwField.value.length + 1;
-        let amountNum = (pwField.value.match(/\d/g) || []).length + 1;
-
-        console.log("lengte pw: ", pwLength);
-        console.log("nummers: ", amountNum);
+        let pwLength = pwField.value.length;
+        let amountNum = (pwField.value.match(/\d/g) || []).length;
 
         if (pwLength > 7 && amountNum > 1){
             indicator.innerText = "OK"
+        } else {
+            indicator.innerText = "Not OK"
         }
 
-        
     })
 
 })();

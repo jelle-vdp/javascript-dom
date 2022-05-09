@@ -18,7 +18,20 @@
         "../../_shared/img/lemon.svg",
         "../../_shared/img/map.svg",
     ];
+    
+    let imgIn = 0;
+    const img = document.getElementsByTagName("img")[0];
 
-    // your code here
+    const nextCarouselImg = () => {
+        if (imgIn !== gallery.length - 1){
+            imgIn = imgIn + 1;
+            img.src = gallery[imgIn]; 
+        } else {
+            imgIn = 0;
+            img.src = gallery[imgIn];
+        }
+    }
+
+    document.getElementById("next").addEventListener("click", nextCarouselImg)
 
 })();
